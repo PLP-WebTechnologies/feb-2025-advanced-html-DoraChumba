@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced HTML5 Elements and Forms</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        form {
+            max-width: 500px;
+            margin: 20px auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4cb865;
+            
+        }
+       
+    </style>
+</head>
+<body>
+
+    <!-- Ordered List with Roman Numerals -->
+    <h2>Ordered List with Roman Numerals</h2>
+    <ol type="I">
+        <li>Sunday</li>
+        <li>Monday</li>
+        <li>Tuesday</li>
+    </ol>
+
+    <!-- External Image from Pexels -->
+    <h2>External Image</h2>
+    <img src="https://images.pexels.com/photos/443446/pexels-photo-443446.jpeg?cs=srgb&dl=pexels-eberhardgross-443446.jpg&fm=jpg&w=5266&h=3403&_gl=1*l57foz*_ga*MTA3MTI3NzE2MS4xNzQzNzg2OTM5*_ga_8JE65Q40S6*MTc0NDM1NTg5MC4zLjEuMTc0NDM1NjcxNi4wLjAuMA.." 
+         alt="Beautiful Nature Scene" 
+         width="500" 
+         height="300">
+
+    <!-- Table of Contacts -->
+    <h1>Contact Information Table</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Mobile</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Juma Mwangi</td>
+                <td>123 pipeline, Nairobi</td>
+                <td>+254728766914</td>
+                <td>juma.mwangi@example.com</td>
+            </tr>
+            <tr>
+                <td>Aisha Njeri</td>
+                <td>456 Ngata, Nakuru</td>
+                <td>+254735628792</td>
+                <td>aisha.njeri@example.com</td>
+            </tr>
+            <tr>
+                <td>Kamau Wanjiru</td>
+                <td>789 Ahero, Kisumu</td>
+                <td>+254712349853</td>
+                <td>kamau.wanjiru@example.com</td>
+            </tr>
+            <tr>
+                <td>Wanjiku Muriuki</td>
+                <td>321 Sotik, Kericho</td>
+                <td>+254709746347</td>
+                <td>wanjiku.muriuki@example.com</td>
+            </tr>
+            <tr>
+                <td>Abdi Mohamed</td>
+                <td>654 Keroka, Kisii</td>
+                <td>+254749214755</td>
+                <td>abdi.mohamed@example.com</td>
+            </tr>
+        </tbody>
+    </table>
+    
+
+    <!-- Registration Form -->
+    <h1>Registration Form</h1>
+    <form action="#" method="post">
+        <!-- Name Field -->
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+        <!-- Email Field -->
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <!-- Password Field -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Create a password" 
+               pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" 
+               title="Password must be at least 8 characters long and contain at least one letter and one number" 
+               required>
+
+        <!-- Date Field -->
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <!-- Dropdown -->
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+            <option value="">Select your country</option>
+            <option value="Kenya">Kenya</option>
+            <option value="Uganda">Uganda</option>
+            <option value="Tanzania">Tanzania</option>
+            <option value="South Africa">South Africa</option>
+
+        </select>
+
+        <!-- Radio Buttons -->
+        <label>Gender:</label>
+        <div>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Female</label>
+        </div>
+
+        <!-- Checkboxes -->
+        <label>Hobbies:</label>
+        <div>
+            <input type="checkbox" id="reading" name="hobbies" value="reading">
+            <label for="reading">Reading</label>
+            <input type="checkbox" id="traveling" name="hobbies" value="traveling">
+            <label for="traveling">Traveling</label>
+            <input type="checkbox" id="sports" name="hobbies" value="sports">
+            <label for="sports">Sports</label>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit">Register</button>
+    </form>
+
+    <!-- Multimedia Elements -->
+    <h2>Multimedia Elements</h2>
+    <h3>Audio</h3>
+    <audio controls>
+        <source src="https://ia800207.us.archive.org/3/items/testmp3testfile/mpthreetest.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <h2>Video</h2>
+    <video width="320" height="240" controls>
+        <source src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+</body>
+</html>
